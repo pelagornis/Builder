@@ -16,7 +16,7 @@ let package = Package(
     ],
     targets: [
         .macro(
-            name: "BuilderMacro",
+            name: "BuilderMacroPlugin",
             dependencies: [
                 .product(name: "SwiftSyntaxMacros", package: "swift-syntax"),
                 .product(name: "SwiftCompilerPlugin", package: "swift-syntax")
@@ -25,7 +25,7 @@ let package = Package(
         .target(
             name: "Builder",
             dependencies: [
-                "BuilderMacro"
+                "BuilderMacroPlugin"
             ]),
         .testTarget(
             name: "BuilderTests",
