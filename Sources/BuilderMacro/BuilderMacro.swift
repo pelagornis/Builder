@@ -1,8 +1,19 @@
-//
-//  File.swift
-//  
-//
-//  Created by Jihoonahn on 6/16/23.
-//
+import SwiftCompilerPlugin
+import SwiftSyntax
+import SwiftSyntaxBuilder
+import SwiftSyntaxMacros
 
-import Foundation
+public struct BuilderMacro: MemberMacro {
+    //MARK: - macro expansion
+    public static func expansion<Declaration: DeclGroupSyntax, Context: MacroExpansionContext>(
+        of node: AttributeSyntax,
+        providingMembersOf declaration: Declaration,
+        in context: Context
+    ) throws -> [DeclSyntax] {
+
+        return [
+            
+        
+        ]
+    }
+}
